@@ -2,67 +2,78 @@ module Main exposing (main)
 
 import Browser
 import Html exposing (Html, div, h1, section, p, text)
-import Html.Attributes
-
-s = Html.Attributes.style
-
+import Html.Attributes exposing (style)
 
 main =
   Browser.sandbox { init = 0, update = update, view = view }
 
 type Msg = Increment | Decrement
 
-update msg model =
-  case msg of
-    Increment ->
-      model + 1
+update msg model = model
 
-    Decrement ->
-      model - 1
+-- css in elm framework :)
 
-bodyStyles =
-  [ s "height" "100vh"
-  , s "width" "90%"
-  , s "margin" "0 auto"
-  , s "display" "flex"
-  , s "flex-direction" "column"
-  , s "align-items" "stretch"
-  , s "font-family" "Cardo, serif"
-  , s "font-size" "22px"
-  ]
+toStyle: List String -> Html.Attribute msg
+toStyle l =
+  case l of
+    [prop, value] -> style prop value
+    _ -> style "" "" -- it works because style omit invalid declarations
 
-h1Styles =
-  [ s "font-family" "'Birthstone Bounce', cursive"
-  , s "font-size" "2.5em"
-  , s "font-weight" "400"
-  ]
+clean: String -> String
+clean = String.trim >> (String.replace ";" "")
 
-letterStyle =
-  [ s "width" "100%"
-  , s "flex" "1"
-  , s "text-align" "justify"
-  ]
+css: String -> List (Html.Attribute msg)
+css = String.lines >> List.map ((String.split ":") >> (List.map clean) >> toStyle)
 
-signatureStyle =
-  [ s "flex" "1"
-  , s "align-self" "flex-end"
-  , s "font-family" "'Birthstone Bounce', cursive"
-  , s "font-size" "2em"
-  , s "font-weight" "400"
-  ]
+
+bodyStyles = css """
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  font-family: Cardo, serif;
+  font-size: 22px;
+"""
+
+h1Styles = css """
+  font-family: 'Birthstone Bounce', cursive;
+  font-size: 2.5em;
+  font-weight: 400;
+"""
+
+contentStyles = css """
+  width: 100%;
+  flex: 1;
+
+  text-align: justify;
+"""
+
+signatureStyle = css """
+  flex: 1;
+  align-self: flex-end;
+
+  font-family: 'Birthstone Bounce', cursive;
+  font-size: 2em;
+  font-weight: 400;
+"""
 
 view model =
   div bodyStyles
-    [ h1 h1Styles [ text "Title" ]
-    , section letterStyle
+    [ h1 h1Styles [ text titleText ]
+    , section contentStyles
       [ p [] [text first]
       , p [] [text second]
       , p [] [text last]
       ]
     , section signatureStyle
-      [ text "The end." ]
+      [ text signatureText ]
     ]
 
+titleText = "Title"
 
 first = """
 test
@@ -76,3 +87,4 @@ last = """
 test3
 """
 
+signatureText = "The end."
