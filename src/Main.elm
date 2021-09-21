@@ -3,6 +3,7 @@ module Main exposing (main)
 import Browser
 import Html exposing (Html, div, h1, section, p, text)
 import Html.Attributes exposing (style)
+import Content exposing (titleText, signatureText, firstParagraph, secondParagraph, lastParagragh)
 
 main =
   Browser.sandbox { init = 0, update = update, view = view }
@@ -65,26 +66,10 @@ view model =
   div bodyStyles
     [ h1 h1Styles [ text titleText ]
     , section contentStyles
-      [ p [] [text first]
-      , p [] [text second]
-      , p [] [text last]
+      [ p [] [text firstParagraph]
+      , p [] [text secondParagraph]
+      , p [] [text lastParagragh]
       ]
     , section signatureStyle
       [ text signatureText ]
     ]
-
-titleText = "Title"
-
-first = """
-test
-"""
-
-second = """
-test2
-"""
-
-last = """
-test3
-"""
-
-signatureText = "The end."
