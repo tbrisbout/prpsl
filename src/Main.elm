@@ -27,23 +27,27 @@ css: String -> List (Html.Attribute msg)
 css = String.lines >> List.map ((String.split ":") >> (List.map clean) >> toStyle)
 
 
-bodyStyles = css """
+mainStyles = css """
   height: 100vh;
   width: 90%;
   margin: 0 auto;
+  max-width: 650px;
 
   display: flex;
   flex-direction: column;
   align-items: stretch;
 
   font-family: Cardo, serif;
-  font-size: 22px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
 """
 
 h1Styles = css """
   font-family: 'Birthstone Bounce', cursive;
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: 400;
+  line-height: 1.2;
 """
 
 contentStyles = css """
@@ -63,7 +67,7 @@ signatureStyle = css """
 """
 
 view model =
-  div bodyStyles
+  div mainStyles
     [ h1 h1Styles [ text titleText ]
     , section contentStyles
       [ p [] [text firstParagraph]
