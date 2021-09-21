@@ -66,13 +66,25 @@ signatureStyle = css """
   font-weight: 400;
 """
 
+-- joy of French
+charHexMap =
+  [ ("à", "\u{00E0}")
+  , ("ç", "\u{00E7}")
+  , ("è", "\u{00E8}")
+  , ("é", "\u{00E9}")
+  , ("ù", "\u{00F9}")
+  ]
+
+replaceUnicodeChar str = List.foldl (\(char, code) acc -> String.replace char code acc) str charHexMap
+t = replaceUnicodeChar >> text
+
 view model =
   div mainStyles
     [ h1 h1Styles [ text titleText ]
     , section contentStyles
-      [ p [] [text firstParagraph]
-      , p [] [text secondParagraph]
-      , p [] [text lastParagragh]
+      [ p [] [t firstParagraph]
+      , p [] [t secondParagraph]
+      , p [] [t lastParagragh]
       ]
     , section signatureStyle
       [ text signatureText ]
