@@ -3,7 +3,7 @@ module Main exposing (main)
 import Browser
 import Html exposing (Html, div, h1, section, p, text)
 import Html.Attributes exposing (style)
-import Lorem exposing (titleText, signatureText, firstParagraph, secondParagraph, lastParagragh)
+import Lorem exposing (titleText, signatureText, paragraphs)
 
 main =
   Browser.sandbox { init = 0, update = update, view = view }
@@ -58,7 +58,7 @@ contentStyles = css """
 """
 
 signatureStyle = css """
-  flex: 1;
+  flex: 1 0 80px;
   align-self: flex-end;
 
   font-family: 'Birthstone Bounce', cursive;
@@ -69,9 +69,13 @@ signatureStyle = css """
 -- joy of French
 charHexMap =
   [ ("à", "\u{00E0}")
+  , ("â", "\u{00E2}")
   , ("ç", "\u{00E7}")
   , ("è", "\u{00E8}")
   , ("é", "\u{00E9}")
+  , ("ê", "\u{00EA}")
+  , ("î", "\u{00EE}")
+  , ("ô", "\u{00F4}")
   , ("ù", "\u{00F9}")
   ]
 
@@ -82,10 +86,7 @@ view model =
   div mainStyles
     [ h1 h1Styles [ text titleText ]
     , section contentStyles
-      [ p [] [t firstParagraph]
-      , p [] [t secondParagraph]
-      , p [] [t lastParagragh]
-      ]
+      (paragraphs |> List.map (\paragraph -> p [] [t paragraph]))
     , section signatureStyle
       [ text signatureText ]
     ]
