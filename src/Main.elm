@@ -3,7 +3,7 @@ module Main exposing (main)
 import Browser
 import Html exposing (Html, div, h1, section, p, text)
 import Html.Attributes exposing (style)
-import Lorem exposing (titleText, signatureText, paragraphs)
+import Content exposing (titleText, signatureText, paragraphs)
 
 main =
   Browser.sandbox { init = 0, update = update, view = view }
@@ -74,6 +74,7 @@ charHexMap =
   , ("è", "\u{00E8}")
   , ("é", "\u{00E9}")
   , ("ê", "\u{00EA}")
+  , ("Ê", "\u{00CA}")
   , ("î", "\u{00EE}")
   , ("ô", "\u{00F4}")
   , ("ù", "\u{00F9}")
@@ -84,9 +85,9 @@ t = replaceUnicodeChar >> text
 
 view model =
   div mainStyles
-    [ h1 h1Styles [ text titleText ]
+    [ h1 h1Styles [ t titleText ]
     , section contentStyles
       (paragraphs |> List.map (\paragraph -> p [] [t paragraph]))
     , section signatureStyle
-      [ text signatureText ]
+      [ t signatureText ]
     ]

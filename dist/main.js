@@ -5212,22 +5212,26 @@ var $author$project$Main$css = A2(
 				$author$project$Main$toStyle))));
 var $author$project$Main$contentStyles = $author$project$Main$css('\n  width: 100%;\n  flex: 1;\n\n  text-align: justify;\n');
 var $elm$html$Html$div = _VirtualDom_node('div');
-var $author$project$Lorem$firstParagraph = '\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac nunc elementum augue eleifend sollicitudin. Donec mi erat, scelerisque eu risus sed, luctus porta elit. Mauris cursus risus risus, ac mollis orci egestas vitae. Suspendisse semper ligula id erat aliquam convallis. Suspendisse potenti. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent consectetur commodo magna at lacinia. Maecenas commodo hendrerit justo, vitae mattis nisi scelerisque ut.\n';
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $author$project$Main$h1Styles = $author$project$Main$css('\n  font-family: \'Birthstone Bounce\', cursive;\n  font-size: 3em;\n  font-weight: 400;\n  line-height: 1.2;\n');
-var $author$project$Lorem$lastParagragh = '\nSed purus lectus, ultricies at nulla at, elementum dignissim orci. Duis id velit sollicitudin, porttitor orci eu, semper mi. Pellentesque pulvinar turpis vitae ligula luctus efficitur. Integer congue quis nulla in rhoncus. Maecenas dignissim ipsum sed diam venenatis sagittis. Sed quis pharetra urna. Mauris egestas, purus id blandit tristique, dolor neque blandit velit, id lobortis lacus quam eget dui. Proin consectetur ex ut odio luctus, eu ornare odio condimentum. Fusce malesuada consequat pharetra.\n';
 var $author$project$Main$mainStyles = $author$project$Main$css('\n  height: 100vh;\n  width: 90%;\n  margin: 0 auto;\n  max-width: 650px;\n\n  display: flex;\n  flex-direction: column;\n  align-items: stretch;\n\n  font-family: Cardo, serif;\n  font-size: 18px;\n  line-height: 1.6;\n  color: #444;\n');
 var $elm$html$Html$p = _VirtualDom_node('p');
-var $author$project$Lorem$secondParagraph = '\nEtiam vel dui pharetra, auctor metus sed, lobortis eros. Nullam non ultrices sapien, sed mollis quam. Pellentesque est sem, feugiat nec diam vel, cursus vulputate felis. Praesent nec congue mauris. Nulla accumsan venenatis semper. Aliquam fringilla, quam vel ornare varius, justo velit malesuada odio, a imperdiet est urna id purus. Donec ultrices ipsum quis justo tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac erat justo. Ut quis leo ligula. Proin id enim dolor. Quisque libero dui, rutrum vitae euismod ut, porttitor ut purus.\n';
+var $author$project$Content$paragraphs = _List_fromArray(
+	['\nIl y a un seul moment dans ma vie que je ne devais pas rater, il fallait que je me retrouve\nce soir là à cet endroit du petit Bayonne.\nEt même si Foufoune Frites ne fait pas rêver grand monde, moi j\'y attache beaucoup d\'importance.\nJ\'ai tellement bien fait de croire à ce qu\'on avait construit par hasard, car le hasard est devenu\nune évidence. Après avoir terminé cet été fou, tu m\'as fait vivre ma dernière année d\'étude de façon\nincroyablement sereine, alors que tout mes amis bataillaient...\n', '\nEnsuite est venu le temps de la distance, cette période que je ne veux pas revivre car être éloigné\nde toi fut l\'une des expériences les plus difficiles à vivre de ma vie d\'adulte. Je me plongeait dans\nle travail et les soirées pour que le temps passe plus vite, et que vienne ce weekend où l\'un de nous\nsautait dans un train.\nNous étions des jeunes adultes tous frémissants, sans contrôle sur nos émotions, et pourtant nous\navons tenu cette première épreuve tous les deux.\n', '\nAvec cet équilibre encore hésitant, tu m\'as rejoins pour ces quelques mois à l\'étroit avant\nde partir pour le 16ème. Je repense à cette période avec beaucoup d\'émotion, car malgré les quelques\népisodes compliqués liés à l\'appartement, le travail, l\'argent, nous nous sommes énormément rapprochés.\nJe me rappelle surtout de ces moment tous les deux au lit, à regarder insouciamment des séries avec un plat\nde pâtes, de toutes ces fois où nous avons fait l\'amour, du temps passé à rire ensemble.\nAu final, cette période nous a fait créer un cocon encore plus fort.\n', '\nNotre vie dans le 15ème à donc suivi ce chemin que nous avions créé, celui de l\'équilibre et de la\nsérénité dans le couple. Ma vie de couple était tellement simple à gérer et satisfaisante que je trouvais ça indécent.\nJe ne comprenais pas pourquoi les autre personnes dans mon entourage n\'aimaient pas faire de soirées et passer du temps\navec leur moitié. La réponse est simple, c\'est parce qu\'ils ne partagent pas leur vie avec toi.\n', '\nDurant toutes ces années de bonheur dans ce quartier, à enchainer les soirées au Celtic, les dimanches blottis l\'un contre\nl\'autre, les voyages autour du monde,\ntu as toujours été d\'un grand soutien pour moi. Je pensais avoir fait de mon mieux pour te soutenir également,\nmais avec le recul que j\'ai aujourd\'hui, je sais que j\'ai manqué des choses. J\'ai eu du mal à comprendre\nque ta vie devenait plus compliquée, à visualiser tes problèmes et tes doutes, et j\'ai cherché à t\'offrir la vie dont\nje rêvais plutôt que de construire ensemble celle qui nous ferait rêver tous les deux.\nJe te promet de toujours rester à l\'écoute, en évitant mon travers de vouloir toujours tout solutionner immédiatement,\net de ne plus refaire la même erreur.\n', '\nDepuis que nous avons décider de faire naître une famille à partir de notre couple, je comprends ces choses plus facilement.\nJe pense que vivre cette grossesse et la naissance de notre merveille nous a permis de synchroniser nos\némotions encore plus profondément.\nLa vie que nous construisons aujourd\'hui est la plus heureuse que j\'ai eu, même si ce n\'est pas la plus reposante.\nÊtre avec toi à Biarritz, et te voir rayonnante quand nous marchons au bord de l\'océan est une sensation géniale\nà chaque fois.\nLa sérénité grâce à cet équilibre dans mon couple, voilà en fait mon principal trait de caractère.\n', '\nTu m\'as donné tant de bonheur jusqu\'ici, et j\'espère avoir réussi à t\'en donner aussi.\nJe veux en tout cas continuer à le faire jour après jour, tous les jours.\nTu es la femme de ma vie, ma meilleure amie, ma confidente, ma déesse du sexe,\nune maman géniale pour notre fille, ma source d\'inspiration.\nTu me fais rire, tu me fais rêver, tu me fais jouir, tu me fais t\'aimer.\nTu as été incroyablement patiente avec moi, et aujourd\'hui je suis prêt.\nJe sais ce que je veux.\nJe veux continuer à vivre tout ça auprès de toi.\n']);
 var $elm$html$Html$section = _VirtualDom_node('section');
-var $author$project$Main$signatureStyle = $author$project$Main$css('\n  flex: 1;\n  align-self: flex-end;\n\n  font-family: \'Birthstone Bounce\', cursive;\n  font-size: 2em;\n  font-weight: 400;\n');
-var $author$project$Lorem$signatureText = 'Lorem signature text...';
+var $author$project$Main$signatureStyle = $author$project$Main$css('\n  flex: 1 0 80px;\n  align-self: flex-end;\n\n  font-family: \'Birthstone Bounce\', cursive;\n  font-size: 2em;\n  font-weight: 400;\n');
+var $author$project$Content$signatureText = 'Je t\'aime. Thomas';
 var $author$project$Main$charHexMap = _List_fromArray(
 	[
 		_Utils_Tuple2('à', '\u00E0'),
+		_Utils_Tuple2('â', '\u00E2'),
 		_Utils_Tuple2('ç', '\u00E7'),
 		_Utils_Tuple2('è', '\u00E8'),
 		_Utils_Tuple2('é', '\u00E9'),
+		_Utils_Tuple2('ê', '\u00EA'),
+		_Utils_Tuple2('Ê', '\u00CA'),
+		_Utils_Tuple2('î', '\u00EE'),
+		_Utils_Tuple2('ô', '\u00F4'),
 		_Utils_Tuple2('ù', '\u00F9')
 	]);
 var $author$project$Main$replaceUnicodeChar = function (str) {
@@ -5245,7 +5249,7 @@ var $author$project$Main$replaceUnicodeChar = function (str) {
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $author$project$Main$t = A2($elm$core$Basics$composeR, $author$project$Main$replaceUnicodeChar, $elm$html$Html$text);
-var $author$project$Lorem$titleText = 'Lorem Title,';
+var $author$project$Content$titleText = 'Ma chérie,';
 var $author$project$Main$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
@@ -5257,41 +5261,29 @@ var $author$project$Main$view = function (model) {
 				$author$project$Main$h1Styles,
 				_List_fromArray(
 					[
-						$elm$html$Html$text($author$project$Lorem$titleText)
+						$author$project$Main$t($author$project$Content$titleText)
 					])),
 				A2(
 				$elm$html$Html$section,
 				$author$project$Main$contentStyles,
-				_List_fromArray(
-					[
-						A2(
-						$elm$html$Html$p,
-						_List_Nil,
-						_List_fromArray(
-							[
-								$author$project$Main$t($author$project$Lorem$firstParagraph)
-							])),
-						A2(
-						$elm$html$Html$p,
-						_List_Nil,
-						_List_fromArray(
-							[
-								$author$project$Main$t($author$project$Lorem$secondParagraph)
-							])),
-						A2(
-						$elm$html$Html$p,
-						_List_Nil,
-						_List_fromArray(
-							[
-								$author$project$Main$t($author$project$Lorem$lastParagragh)
-							]))
-					])),
+				A2(
+					$elm$core$List$map,
+					function (paragraph) {
+						return A2(
+							$elm$html$Html$p,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$author$project$Main$t(paragraph)
+								]));
+					},
+					$author$project$Content$paragraphs)),
 				A2(
 				$elm$html$Html$section,
 				$author$project$Main$signatureStyle,
 				_List_fromArray(
 					[
-						$elm$html$Html$text($author$project$Lorem$signatureText)
+						$author$project$Main$t($author$project$Content$signatureText)
 					]))
 			]));
 };
