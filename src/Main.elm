@@ -3,7 +3,7 @@ module Main exposing (main)
 import Browser
 import Html exposing (Html, div, h1, section, p, text)
 import Html.Attributes exposing (style)
-import Content exposing (titleText, signatureText, firstParagraph, secondParagraph, lastParagragh)
+import Lorem exposing (titleText, signatureText, firstParagraph, secondParagraph, lastParagragh)
 
 main =
   Browser.sandbox { init = 0, update = update, view = view }
